@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <FanControlConfigV2 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <NotebookModel>Asus K501UX</NotebookModel>
-  <Author />
-  <EcPollInterval>150</EcPollInterval>
+  <NotebookModel>G751JT</NotebookModel>
+  <Author>Fawkes</Author>
+  <EcPollInterval>500</EcPollInterval>
   <ReadWriteWords>false</ReadWriteWords>
-  <CriticalTemperature>90</CriticalTemperature>
+  <CriticalTemperature>80</CriticalTemperature>
   <FanConfigurations>
     <FanConfiguration>
       <ReadRegister>151</ReadRegister>
@@ -13,10 +13,10 @@
       <MaxSpeedValue>8</MaxSpeedValue>
       <IndependentReadMinMaxValues>false</IndependentReadMinMaxValues>
       <MinSpeedValueRead>0</MinSpeedValueRead>
-      <MaxSpeedValueRead>255</MaxSpeedValueRead>
-      <ResetRequired>false</ResetRequired>
-      <FanSpeedResetValue>0</FanSpeedResetValue>
-      <FanDisplayName>Left Fan</FanDisplayName>
+      <MaxSpeedValueRead>0</MaxSpeedValueRead>
+      <ResetRequired>true</ResetRequired>
+      <FanSpeedResetValue>8</FanSpeedResetValue>
+      <FanDisplayName>CPU</FanDisplayName>
       <TemperatureThresholds>
         <TemperatureThreshold>
           <UpThreshold>0</UpThreshold>
@@ -24,33 +24,33 @@
           <FanSpeed>0</FanSpeed>
         </TemperatureThreshold>
         <TemperatureThreshold>
-          <UpThreshold>50</UpThreshold>
-          <DownThreshold>45</DownThreshold>
+          <UpThreshold>35</UpThreshold>
+          <DownThreshold>30</DownThreshold>
           <FanSpeed>12.5</FanSpeed>
         </TemperatureThreshold>
         <TemperatureThreshold>
-          <UpThreshold>55</UpThreshold>
-          <DownThreshold>50</DownThreshold>
+          <UpThreshold>45</UpThreshold>
+          <DownThreshold>32</DownThreshold>
           <FanSpeed>25</FanSpeed>
         </TemperatureThreshold>
         <TemperatureThreshold>
-          <UpThreshold>60</UpThreshold>
-          <DownThreshold>55</DownThreshold>
+          <UpThreshold>55</UpThreshold>
+          <DownThreshold>42</DownThreshold>
           <FanSpeed>37.5</FanSpeed>
         </TemperatureThreshold>
         <TemperatureThreshold>
-          <UpThreshold>65</UpThreshold>
-          <DownThreshold>60</DownThreshold>
+          <UpThreshold>60</UpThreshold>
+          <DownThreshold>52</DownThreshold>
           <FanSpeed>50</FanSpeed>
         </TemperatureThreshold>
         <TemperatureThreshold>
-          <UpThreshold>70</UpThreshold>
-          <DownThreshold>65</DownThreshold>
+          <UpThreshold>65</UpThreshold>
+          <DownThreshold>57</DownThreshold>
           <FanSpeed>75</FanSpeed>
         </TemperatureThreshold>
         <TemperatureThreshold>
-          <UpThreshold>100</UpThreshold>
-          <DownThreshold>70</DownThreshold>
+          <UpThreshold>75</UpThreshold>
+          <DownThreshold>62</DownThreshold>
           <FanSpeed>100</FanSpeed>
         </TemperatureThreshold>
       </TemperatureThresholds>
@@ -60,13 +60,13 @@
       <ReadRegister>152</ReadRegister>
       <WriteRegister>152</WriteRegister>
       <MinSpeedValue>0</MinSpeedValue>
-      <MaxSpeedValue>1</MaxSpeedValue>
+      <MaxSpeedValue>8</MaxSpeedValue>
       <IndependentReadMinMaxValues>false</IndependentReadMinMaxValues>
       <MinSpeedValueRead>0</MinSpeedValueRead>
       <MaxSpeedValueRead>0</MaxSpeedValueRead>
-      <ResetRequired>false</ResetRequired>
-      <FanSpeedResetValue>0</FanSpeedResetValue>
-      <FanDisplayName>Right Fan</FanDisplayName>
+      <ResetRequired>true</ResetRequired>
+      <FanSpeedResetValue>8</FanSpeedResetValue>
+      <FanDisplayName>GPU</FanDisplayName>
       <TemperatureThresholds>
         <TemperatureThreshold>
           <UpThreshold>0</UpThreshold>
@@ -74,8 +74,33 @@
           <FanSpeed>0</FanSpeed>
         </TemperatureThreshold>
         <TemperatureThreshold>
-          <UpThreshold>100</UpThreshold>
-          <DownThreshold>70</DownThreshold>
+          <UpThreshold>35</UpThreshold>
+          <DownThreshold>30</DownThreshold>
+          <FanSpeed>12.5</FanSpeed>
+        </TemperatureThreshold>
+        <TemperatureThreshold>
+          <UpThreshold>45</UpThreshold>
+          <DownThreshold>32</DownThreshold>
+          <FanSpeed>25</FanSpeed>
+        </TemperatureThreshold>
+        <TemperatureThreshold>
+          <UpThreshold>55</UpThreshold>
+          <DownThreshold>42</DownThreshold>
+          <FanSpeed>37.5</FanSpeed>
+        </TemperatureThreshold>
+        <TemperatureThreshold>
+          <UpThreshold>60</UpThreshold>
+          <DownThreshold>52</DownThreshold>
+          <FanSpeed>50</FanSpeed>
+        </TemperatureThreshold>
+        <TemperatureThreshold>
+          <UpThreshold>65</UpThreshold>
+          <DownThreshold>57</DownThreshold>
+          <FanSpeed>75</FanSpeed>
+        </TemperatureThreshold>
+        <TemperatureThreshold>
+          <UpThreshold>75</UpThreshold>
+          <DownThreshold>62</DownThreshold>
           <FanSpeed>100</FanSpeed>
         </TemperatureThreshold>
       </TemperatureThresholds>
@@ -87,19 +112,21 @@
       <WriteMode>Set</WriteMode>
       <WriteOccasion>OnWriteFanSpeed</WriteOccasion>
       <Register>160</Register>
-      <Value>0</Value>
-      <ResetRequired>false</ResetRequired>
-      <ResetValue>0</ResetValue>
+      <Value>10</Value>
+      <ResetRequired>true</ResetRequired>
+      <ResetValue>10</ResetValue>
       <ResetWriteMode>Set</ResetWriteMode>
+      <Description>CPU FAN</Description>
     </RegisterWriteConfiguration>
     <RegisterWriteConfiguration>
       <WriteMode>Set</WriteMode>
       <WriteOccasion>OnWriteFanSpeed</WriteOccasion>
       <Register>166</Register>
-      <Value>0</Value>
-      <ResetRequired>false</ResetRequired>
-      <ResetValue>0</ResetValue>
+      <Value>10</Value>
+      <ResetRequired>true</ResetRequired>
+      <ResetValue>10</ResetValue>
       <ResetWriteMode>Set</ResetWriteMode>
+      <Description>GPU FAN</Description>
     </RegisterWriteConfiguration>
   </RegisterWriteConfigurations>
 </FanControlConfigV2>
