@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <FanControlConfigV2 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <NotebookModel>Aspire 515-48M</NotebookModel>
+  <NotebookModel>Aspire A515-48M</NotebookModel>
   <Author>moryz</Author>
   <EcPollInterval>250</EcPollInterval>
   <ReadWriteWords>false</ReadWriteWords>
